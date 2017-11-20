@@ -22,17 +22,19 @@ class ProductList extends Component {
 
     this.state = {
       products: [
-        { id: 1, name: "Hipster Ultimate", price: 299, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" },
-        { id: 2, name: "On Motion Live", price: 99, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" },
-        { id: 3, name: "Underground Max", price: 149, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" },
+        { id: 1, name: "Converse Red", price: 70, image: "http://coliseum.vteximg.com.br/arquivos/ids/172281-210-210/157640C-0.jpg?v=636452255400300000" },
+        { id: 2, name: "Vans White", price: 100, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjyCzvYqzLym9nIHz034ChSLsU79lTTLTgxX0FU_UC3CKyP7IN" },
+        { id: 3, name: "Adidas Black and White", price: 85, image: "https://http2.mlstatic.com/S_668325-MLA25437749769_032017-O.jpg" },
       ]
     }
   }
 
   render() {
     return (
+
       <div style={styles.products}>
         {this.state.products.map(product =>
+
           <div className="thumbnail" style={styles.product} key={product.id}>
             <img src={product.image} alt={product.name} />
             <div className="caption">
